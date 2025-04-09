@@ -14,3 +14,11 @@ class Asteroid(CircleShape):
         
     def move(self, dt):
         self.position += self.velocity * dt
+
+    def split(self):
+        self.kill()
+        if self.radius <= ASTEROID_MIN_RADIUS:
+            return
+        else:
+            print("larger!")
+            return
