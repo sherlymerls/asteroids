@@ -44,8 +44,9 @@ class Player(CircleShape):
         self.position += forward * PLAYER_SPEED * dt
 
     def shoot(self):
-        new_shot = Shot(self.position[0], self.position[1])
-        #new_shot.velocity = (0,1)
+        #print(self.rotation)
+        new_shot = Shot(self.position[0], self.position[1], self.rotation)
+        
 
 
 #print(PLAYER_RADIUS)
